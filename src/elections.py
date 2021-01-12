@@ -29,6 +29,11 @@ class Elections:
         self.start_state_voting()
         self.show_winner()
 
+    def run_rigged_model(self, party):
+        self.start_state_voting()
+        print("And the winner is ... ")
+        process_results(self.master_state_map, party)
+
     def run_vote(self, population):
         """
         This method runs the voting process for a given population size and returns a winner
